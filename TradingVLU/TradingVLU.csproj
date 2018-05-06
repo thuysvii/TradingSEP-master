@@ -432,7 +432,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\about.cshtml" />
     <Content Include="Views\Home\contact.cshtml" />
-    <Content Include="Views\Home\index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout_Navigation_Slider.cshtml" />
     <Content Include="Views\Item\index.cshtml" />
     <Content Include="Views\Item\list.cshtml" />
@@ -450,6 +450,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\img\items\" />
+    <Folder Include="img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

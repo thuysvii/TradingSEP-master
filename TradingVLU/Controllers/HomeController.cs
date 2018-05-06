@@ -9,21 +9,24 @@ namespace TradingVLU.Controllers
     public class HomeController : Controller
     {
         vlutrading3545Entities db = new vlutrading3545Entities();
+        
+        [HttpGet]
         [Route]
-        public ActionResult index()
+        public ActionResult Index()
         {
-            return View();
+            var p = db.items.ToList();
+            return View(p);
         }
+        
 
-        [Route("about")]
         public ActionResult about()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
+        
 
-        [Route("contact")]
         public ActionResult contact()
         {
             ViewBag.Message = "Your contact page.";
