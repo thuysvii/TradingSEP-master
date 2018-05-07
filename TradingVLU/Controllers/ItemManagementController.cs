@@ -8,10 +8,16 @@ using TradingVLU.Models;
 
 namespace TradingVLU.Controllers
 {
+  
     [RoutePrefix("manageitem")]
     [Route("{action=index}")]
+
+
     public class ItemManagementController : Controller
     {
+        vlutrading3545Entities dbt = new vlutrading3545Entities();
+        private object db;
+
         // GET: ItemManagement
 
         public ActionResult index()
@@ -122,10 +128,18 @@ namespace TradingVLU.Controllers
             ViewBag.IdItem = id;
             return View();
         }
-            
-            
-            
-        
+
+        public ActionResult ManageDelete(int id)
+        {
+            var p = dbt.items.FirstOrDefault(x => x.id == id);
+            dbt.items.Remove(p);
+            dbt.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
+
+
 
     }
 }
